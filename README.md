@@ -1,64 +1,65 @@
-# Piglatin/ Caeser cypher encryption
+# Pig Latin / Caesar cipher encryption
 
 ## Title
 
-Pig Latin plus Caesar Cipher File Transformer
-Python and Go Hybrid Project
+Pig Latin plus Caesar Cipher File Transformer  
+Python and Go hybrid project
 
 ## Overview
 
-This project is a learning focused file transformation tool.
-It combines Pig Latin text transformation and a Caesar cipher shift.
-It is not secure encryption. It is controlled obfuscation.
+This project is a learning-focused file transformation tool.
+It combines Pig Latin text transformation and a configurable Caesar cipher shift.
+It is not secure encryption — it is controlled obfuscation.
 
-The project uses two languages.
-Go handles all transformation logic.
-Python handles user interaction and orchestration.
+The project uses two languages:
+
+- Go handles all transformation logic.
+- Python handles user interaction and orchestration.
 
 ### Goals
 
 - Practice clean system design
-- Learn cross language integration
+- Learn cross-language integration
 - Enforce strict specs across implementations
 - Build reversible text transformations
 
-### Non Goals
+### Non-Goals
 
 - Strong cryptography
 - Data security against attackers
-- Production grade encryption
+- Production-grade encryption
 
 ## How It Works
 
 ### Encryption flow
 
-1. Python validates input and arguments
-2. Python calls the Go engine
-3. Go applies Pig Latin
-4. Go applies Caesar cipher
-5. Output is written to file
+1. Python validates input and arguments.
+2. Python calls the Go engine.
+3. Go applies Pig Latin.
+4. Go applies Caesar cipher.
+5. Output is written to file.
 
 ### Decryption flow
 
-1. Python validates encrypted file
-2. Python calls the Go engine
-3. Go reverses Caesar cipher
-4. Go reverses Pig Latin
-5. Original text is restored
+1. Python validates the encrypted file.
+2. Python calls the Go engine.
+3. Go reverses Caesar cipher.
+4. Go reverses Pig Latin.
+5. Original text is restored.
 
 ## Language Responsibilities
 
-#### Go
+### Go
 
 - Core transformation engine
 - Pig Latin forward and reverse
 - Caesar cipher forward and reverse
-- File safe processing
+- File-safe processing
 - Deterministic output
 
-#### Python
+### Python
 
-- Command line interface
+- Command-line interface
 - Argument parsing
 - Config handling
 - Input validation
@@ -68,29 +69,30 @@ Python handles user interaction and orchestration.
 ## Project Structure
 
 root
+
 - spec (Contains all transformation rules and edge cases)
 - go_engine (Go source code for the transformation engine)
 - python_cli (Python CLI that users interact with)
-- tests (Cross language tests to ensure identical behavior)
-- docs(Design notes and explanations)
+- tests (Cross-language tests to ensure identical behavior)
+- docs (Design notes and explanations)
 
-Specification First Rule
+### Specification First Rule
 
 All behavior is defined in spec files.
 Both Python and Go must follow the spec exactly.
 If output differs, the implementation is wrong.
 
-#### Pig Latin Rules
+### Pig Latin Rules
 
 Pig Latin is deterministic.
 Punctuation and spacing are preserved.
 Reverse transformation is supported by strict rules or metadata.
 
-#### Caesar Cipher Rules
+### Caesar Cipher Rules
 
-Alphabet only shifting.
+Alphabet-only shifting.
 Uppercase and lowercase preserved.
-Non alphabet characters untouched.
+Non-alphabet characters untouched.
 Shift value is configurable.
 
 ### Limitations
@@ -101,28 +103,30 @@ Shift value is configurable.
 
 ### Why Python plus Go
 
-Python
+Python:
+
 - Fast iteration
 - Clean CLI
 - Easy validation
 
-Go
+Go:
+
 - Speed
 - Strong typing
 - Single binary engine
 
 This split keeps the project clean and maintainable.
 
-Intended Audience
+## Intended Audience
 
 - Students
 - Developers learning Go
 - Developers learning system design
 - Anyone practicing reversible transformations
 
-Future Extensions
+## Future Extensions
 
 - GUI wrapper
-- Metadata based Pig Latin reversal
+- Metadata-based Pig Latin reversal
 - Streaming large files
 - Additional ciphers
