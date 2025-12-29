@@ -1,0 +1,6 @@
+[
+  {"id": "e1", "input": "", "pig_expected": "", "caesar_key": 3, "caesar_expected": ""},
+  {"id": "e2", "input": "x", "pig_expected": "x-ay", "caesar_key": 1, "caesar_expected": "y"},
+  {"id": "e3", "input": "123", "pig_expected": "123", "caesar_key": 4, "caesar_expected": "123"},
+  {"id": "e4", "input": "hyphen-word", "pig_expected": "yphen-hayordway", "caesar_key": 2, "caesar_expected": "j{rgp-tqpf"}
+]

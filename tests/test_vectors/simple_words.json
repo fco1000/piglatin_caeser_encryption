@@ -1,0 +1,6 @@
+[
+  {"id": "t1", "input": "dog", "pig_expected": "ogday", "caesar_key": 3, "caesar_expected": "grj"},
+  {"id": "t2", "input": "chair", "pig_expected": "airchay", "caesar_key": 5, "caesar_expected": "hmfwn"},
+  {"id": "t3", "input": "apple", "pig_expected": "appleway", "caesar_key": 1, "caesar_expected": "bqqmf"},
+  {"id": "t4", "input": "ink", "pig_expected": "inkway", "caesar_key": 2, "caesar_expected": "kpm"}
+]

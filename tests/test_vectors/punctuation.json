@@ -1,0 +1,5 @@
+[
+  {"id": "p1", "input": "Hello!", "pig_expected": "Ellohay!", "caesar_key": 7, "caesar_expected": "Olssv!"},
+  {"id": "p2", "input": "end.", "pig_expected": "endway.", "caesar_key": 4, "caesar_expected": "irh."},
+  {"id": "p3", "input": "don't", "pig_expected": "on'tday", "caesar_key": 2, "caesar_expected": "fq'p v"}
+]

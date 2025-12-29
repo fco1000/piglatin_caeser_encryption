@@ -19,7 +19,7 @@ then the preferred suffix added to the end of the word
 
 func PigLatinConv(input string) string {
 	if input == "" {
-		return "blank input"
+		return ""
 	}
 	result := ""
 	words := []string{}
@@ -63,7 +63,7 @@ func isVowel(b byte) bool {
 
 func PigLatinDeconv(input string) string {
 	if input == "" {
-		return "Enter a valid input"
+		return ""
 	}
 	result := ""
 	words := []string{}
@@ -87,7 +87,7 @@ func PigLatinDeconv(input string) string {
 }
 
 func ReplaceConsonantCluster(word string) string {
-	if word == " " {
+	if word == "" {
 		return word
 	}
 	first := strings.LastIndex(word, "'") // get the index of the last apostrophe

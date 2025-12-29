@@ -1,0 +1,4 @@
+[
+  {"id": "m1", "input": "London", "pig_expected": "Ondonlay", "caesar_key": 3, "caesar_expected": "Orqgrq"},
+  {"id": "m2", "input": "iPhone", "pig_expected": "iPhoneway", "caesar_key": 5, "caesar_expected": "nUtmjs"}
+]
