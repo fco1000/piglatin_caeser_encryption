@@ -23,7 +23,7 @@ func PigLatinConv(input string) string {
 	}
 	result := ""
 	words := []string{}
-	words = strings.Split(input," ")
+	words = strings.Split(input, " ")
 	for i, word := range words {
 		if isVowel(word[0]) {
 			word = word + "-way"
@@ -67,11 +67,11 @@ func PigLatinDeconv(input string) string {
 	}
 	result := ""
 	words := []string{}
-	words = strings.Split(input," ")
+	words = strings.Split(input, " ")
 	for i, word := range words {
-		if strings.Contains(word,"-way") {
+		if strings.Contains(word, "-way") {
 			word = strings.TrimSuffix(word, "-way")
-		} else if strings.Contains(word,"-ay") {
+		} else if strings.Contains(word, "-ay") {
 			word = strings.TrimSuffix(word, "-ay")
 			word = ReplaceConsonantCluster(word)
 		}
@@ -82,7 +82,6 @@ func PigLatinDeconv(input string) string {
 			result = result + word
 		}
 	}
-
 
 	return result
 }
@@ -95,12 +94,12 @@ func ReplaceConsonantCluster(word string) string {
 	if first == -1 {
 		return word
 	}
-	rest := word[:first] // remove the apostrophe 
+	rest := word[:first]                   // remove the apostrophe
 	second := strings.LastIndex(rest, "'") // get the index for the second apostrophe
 	if second == -1 {
 		return word
 	}
 	cluster := word[second+1 : first] // get the consonant cluster using the indices of the apostrophes while excluding them
-	base := word[:second] // get the base word
+	base := word[:second]             // get the base word
 	return cluster + base
 }
