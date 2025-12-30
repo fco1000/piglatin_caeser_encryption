@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "input": "Hello world",
+        "pig_expected": "Ello'hay orld'way",
+        "caesar_key": 3,
+        "caesar_expected": "Khoor'kdb zruog'zdB"
+    },
+    {
+        "id": "2",
+        "input": "Pig Latin",
+        "pig_expected": "Ig'pay Atin'lay",
+        "caesar_key": 5,
+        "caesar_expected": "Nl'ufd Fyns'qfd"
+    },
+    {
+        "id": "3",
+        "input": "AEIOU vowels",
+        "pig_expected": "AEIOU'way owels'vay",
+        "caesar_key": 2,
+        "caesar_expected": "CGKQW'way qxgmu'xay"
+    },
+    {
+        "id": "4",
+        "input": "123 !@#",
+        "pig_expected": "123 !@#",
+        "caesar_key": 4,
+        "caesar_expected": "123 !@#"
+    },
+    {
+        "id": "5",
+        "input": "",
+        "pig_expected": "",
+        "caesar_key": 7,
+        "caesar_expected": ""
+    }
+]
+

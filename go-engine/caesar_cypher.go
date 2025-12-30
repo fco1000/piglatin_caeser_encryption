@@ -1,4 +1,4 @@
-package pig_caeser
+package pig_caesar
 
 func CaeserCypher(input string, key int) string {
 	if input == "" {

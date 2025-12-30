@@ -1,4 +1,4 @@
-package pig_caeser
+package pig_caesar
 
 import "strings"
 

@@ -1,3 +1,3 @@
-module pig_caeser
+module pig_caesar
 
 go 1.25.5
