@@ -1,5 +1,6 @@
 import sys
 import logging
+import time
 
 from .args import parse_args
 from .config import load_config, map_to_engine_args
@@ -7,6 +8,7 @@ from .utils import ensure_input_valid
 from .runner import run_engine
 from .errors import friendly_message
 
+start = time.perf_counter()
 
 logger = logging.getLogger("pigcipher")
 
@@ -44,9 +46,11 @@ def main(argv=None):
         except Exception as e:
             logger.error("Failed writing output: %s", e)
             sys.exit(4)
+            
+    elapsed = time.perf_counter() - start
 
     print("Operation completed successfully.")
-
+    print(f"Completed in {elapsed:.2f} seconds.")
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)

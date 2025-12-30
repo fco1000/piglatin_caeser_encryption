@@ -23,10 +23,18 @@ def run_engine(engine_path: Optional[str], engine_args: List[str], cwd: Optional
         if not go_bin:
             return 127, "", "go tool not found in PATH and no engine binary provided"
         # run the package directory so the engine's main.go runs
-        cmd = [go_bin, "run", "./go-engine"] + engine_args
+        cmd = [go_bin, "run", "./go-engine/cmd/pig_caesar"] + engine_args
 
     try:
-        proc = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, check=False)
+        proc = subprocess.run(
+            cmd, 
+            cwd=cwd, 
+            capture_output=True, 
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            check=False
+        )
         return proc.returncode, proc.stdout or "", proc.stderr or ""
     except FileNotFoundError as e:
         return 127, "", str(e)
@@ -36,7 +44,7 @@ def run_engine(engine_path: Optional[str], engine_args: List[str], cwd: Optional
 
 
 def make_engine_cmdline(engine_path: Optional[str], engine_args: List[str]) -> str:
-    base = engine_path if engine_path else "go run ./go-engine"
+    base = engine_path if engine_path else "go run ./go-engine/cmd/pig_caesar"
     return " " .join([base] + engine_args)
 
 

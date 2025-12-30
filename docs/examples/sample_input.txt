@@ -1,4 +1,3 @@
 Hello, world! This sample paragraph is intended for quick testing of the
 Pig Latin and Caesar cipher transformations. Don't forget to check
 punctuation handling, hyphenated-words, contractions, and numbers like 123.
-
