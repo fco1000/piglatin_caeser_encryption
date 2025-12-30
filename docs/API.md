@@ -20,6 +20,7 @@ Files of interest (implementation may be in subpackages):
   - `func PigLatinDeconv(input string) string`
     - Purpose: Heuristic reversal of Pig Latin back to base words.
 
-Notes
+Notes:
+
 - The API currently uses string return values and returns human-readable error strings on invalid input. The `specs/errors.md` recommends structured error codes; consider refactoring to `(string, error)` or a typed error with codes to improve programmatic usage.
 - For better Unicode support and punctuation preservation, update Pig Latin functions to operate on `[]rune` and implement tokenization that separates leading/trailing punctuation from the alphabetic core.

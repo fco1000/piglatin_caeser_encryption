@@ -26,10 +26,12 @@ go run .
 ```
 
 Notes on inputs/outputs
+
 - Input files: plain UTF-8 text files (.txt, .md, .json). Binary files are not supported.
 - Output: by default the CLI writes the engine stdout to the file specified by `--output`; when using a compiled engine binary that writes files itself, the CLI leaves output handling to the engine.
 
 Testing
+
 - Run the Python vector tests (requires `pytest`):
 
 ```powershell
@@ -37,5 +39,6 @@ python -m pytest -q
 ```
 
 Tips
+
 - If the engine is not found, the CLI will attempt to use `go run ./go-engine` so ensure `go` is on your PATH.
 - Use the `--config` option to pass a JSON config file with `engine_path` or other overrides.

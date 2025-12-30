@@ -6,8 +6,8 @@ import (
 )
 
 var (
-	ErrShiftZero        = errors.New("shift must not be zero")
-	ErrShiftOutOfRange  = errors.New("shift out of allowed range (-25..25)")
+	ErrShiftZero       = errors.New("shift must not be zero")
+	ErrShiftOutOfRange = errors.New("shift out of allowed range (-25..25)")
 )
 
 // ValidateShift checks if a shift value is acceptable for a Caesar cipher.

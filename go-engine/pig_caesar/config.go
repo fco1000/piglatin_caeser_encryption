@@ -17,11 +17,11 @@ const (
 // Config represents the full intent of a single run.
 type Config struct {
 	Mode        Mode
-	InputPath  string
-	OutputPath string
-	Password   string
+	InputPath   string
+	OutputPath  string
+	Password    string
 	CaesarShift int
-	PigLatinOn bool
+	PigLatinOn  bool
 }
 
 // NewConfigFromArgs builds a Config from raw arguments passed by Python.

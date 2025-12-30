@@ -15,5 +15,6 @@ flowchart TD
 ```
 
 Notes:
+
 - The Python CLI is the control plane: it validates, maps, and coordinates.
 - The Go engine is the data plane: performs transforms deterministically.
