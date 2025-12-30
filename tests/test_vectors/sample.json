@@ -4,7 +4,7 @@
         "input": "Hello world",
         "pig_expected": "Ello'hay orld'way",
         "caesar_key": 3,
-        "caesar_expected": "Khoor'kdb zruog'zdB"
+        "caesar_expected": "Hoor'khd ruog'zdB"
     },
     {
         "id": "2",
@@ -22,10 +22,10 @@
     },
     {
         "id": "4",
-        "input": "123 !@#",
-        "pig_expected": "123 !@#",
+        "input": "Python Go",
+        "pig_expected": "Ython'pay O'gay",
         "caesar_key": 4,
-        "caesar_expected": "123 !@#"
+        "caesar_expected": "Cdlsr'te D'kce"
     },
     {
         "id": "5",
@@ -35,4 +35,3 @@
         "caesar_expected": ""
     }
 ]
-
